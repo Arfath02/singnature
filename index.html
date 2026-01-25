@@ -1,0 +1,214 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>BIA Textiles - Signature Generator</title>
+</head>
+
+<body bgcolor="#ffffff" style="background:#ffffff; font-family:Arial, Helvetica, sans-serif; margin:0; padding:20px;">
+
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+    <tr>
+      <!-- LEFT: FORM -->
+      <td style="width:260px; vertical-align:top; padding-right:16px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+          style="width:100%; border:1px solid #ededed; background:#f4f4f4;">
+          <tr>
+            <td style="padding:14px;">
+              <div style="font-weight:bold; margin-bottom:10px; font-size:14px;">Signature Details</div>
+
+              <form id="form" style="margin:0;">
+                <input id="nameInput" type="text" placeholder="Name"
+                  style="width:100%; padding:8px; margin:6px 0; border:0; border-radius:3px; box-sizing:border-box;" />
+
+                <input id="designationInput" type="text" placeholder="Designation"
+                  style="width:100%; padding:8px; margin:6px 0; border:0; border-radius:3px; box-sizing:border-box;" />
+
+                <input id="phoneInput" type="text" placeholder="Phone Number"
+                  style="width:100%; padding:8px; margin:6px 0; border:0; border-radius:3px; box-sizing:border-box;" />
+
+                <input id="emailInput" type="text" placeholder="Email ID"
+                  style="width:100%; padding:8px; margin:6px 0; border:0; border-radius:3px; box-sizing:border-box;" />
+
+                <div style="height:8px;"></div>
+
+                <button type="button" onclick="fillForm()"
+                  style="border-radius:12px; width:110px; height:34px; border:1px solid #c6c6c6; background:#ffffff; cursor:pointer;">
+                  Generate
+                </button>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </td>
+
+      <!-- RIGHT: SIGNATURE PREVIEW -->
+      <td style="vertical-align:top;">
+        <!-- SIGNATURE WRAP -->
+        <table id="signaturewrap" role="presentation" cellpadding="0" cellspacing="0" border="0"
+          style="width:720px; background:#ffffff; border:1px solid #d9d9d9; border-radius:10px; overflow:hidden;">
+          <tr>
+            <!-- LEFT LOGO -->
+            <td style="width:240px; padding:18px 16px; vertical-align:middle; text-align:center;">
+              <img
+                id="sigLogo"
+                src="https://YOURDOMAIN.com/images/bia-logo.png"
+                width="190"
+                alt="BIA Textiles"
+                style="display:block; border:0; outline:none; text-decoration:none; margin:0 auto;" />
+            </td>
+
+            <!-- VERTICAL RED LINE -->
+            <td style="width:2px; background:#d64b4b; font-size:0; line-height:0;">&nbsp;</td>
+
+            <!-- RIGHT CONTENT -->
+            <td style="padding:16px 18px; vertical-align:top;">
+              <!-- NAME -->
+              <div style="font-size:24px; line-height:28px; font-weight:700; color:#000000; margin:0;">
+                <span id="sigName">Vijay Gopi Ayyanattu</span>
+              </div>
+
+              <!-- DESIGNATION -->
+              <div style="font-size:14px; line-height:18px; font-weight:700; color:#000000; margin-top:3px;">
+                <span id="sigDesignation">Human Resources &amp; Facilities</span>
+              </div>
+
+              <div style="height:12px; font-size:12px; line-height:12px;">&nbsp;</div>
+
+              <!-- TWO COLUMNS -->
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+                <tr>
+                  <!-- LEFT COLUMN -->
+                  <td style="width:58%; vertical-align:top; padding-right:10px;">
+                    <!-- Phone row -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%; margin-bottom:8px;">
+                      <tr>
+                        <td style="width:24px; vertical-align:top;">
+                          <img
+                            src="https://YOURDOMAIN.com/images/icon-phone-red.png"
+                            width="16" height="16"
+                            alt="Phone"
+                            style="display:block; border:0; margin-top:1px;" />
+                        </td>
+                        <td style="vertical-align:top; font-size:13px; line-height:17px; color:#111111;">
+                          <span id="sigPhone">0779625415</span>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Address row -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+                      <tr>
+                        <td style="width:24px; vertical-align:top;">
+                          <img
+                            src="https://YOURDOMAIN.com/images/icon-location-red.png"
+                            width="16" height="16"
+                            alt="Location"
+                            style="display:block; border:0; margin-top:2px;" />
+                        </td>
+                        <td style="vertical-align:top; font-size:12.5px; line-height:16px; color:#111111;">
+                          Land No. 405, Plot 8 Zubaidi,<br />
+                          King Hussein Bin Talal Development Area,
+                          Al-Mafraq, Jordan
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+
+                  <!-- RIGHT COLUMN -->
+                  <td style="width:42%; vertical-align:top;">
+                    <!-- Email row -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%; margin-bottom:8px;">
+                      <tr>
+                        <td style="width:24px; vertical-align:top;">
+                          <img
+                            src="https://YOURDOMAIN.com/images/icon-email-red.png"
+                            width="16" height="16"
+                            alt="Email"
+                            style="display:block; border:0; margin-top:2px;" />
+                        </td>
+                        <td style="vertical-align:top; font-size:13px; line-height:17px; color:#111111;">
+                          <a id="sigEmailLink" href="mailto:vijay.gopi@biatextiles.co"
+                            style="color:#111111; text-decoration:none;">
+                            <span id="sigEmailText">vijay.gopi@biatextiles.co</span>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <!-- Website row (fixed, no input) -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="width:100%;">
+                      <tr>
+                        <td style="width:24px; vertical-align:top;">
+                          <img
+                            src="https://YOURDOMAIN.com/images/icon-web-red.png"
+                            width="16" height="16"
+                            alt="Web"
+                            style="display:block; border:0; margin-top:2px;" />
+                        </td>
+                        <td style="vertical-align:top; font-size:13px; line-height:17px;">
+                          <a href="https://www.biatextiles.co"
+                            style="color:#1a57d6; text-decoration:underline;">
+                            www.biatextiles.co
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+        </table>
+
+        <!-- COPY BUTTON -->
+        <button id="copyButton" type="button" onclick="copyToClipboard()"
+          style="margin:12px 0 0 0; border-radius:12px; width:110px; height:34px; border:1px solid #c6c6c6; background:#ffffff; cursor:pointer;">
+          Copy
+        </button>
+
+      </td>
+    </tr>
+  </table>
+
+  <script type="text/javascript">
+    function fillForm() {
+      var name = document.getElementById("nameInput").value || "Your Name";
+      var designation = document.getElementById("designationInput").value || "DESIGNATION";
+      var phone = document.getElementById("phoneInput").value || "Phone Number";
+      var email = document.getElementById("emailInput").value || "email@biatextiles.co";
+
+      document.getElementById("sigName").innerHTML = name;
+      document.getElementById("sigDesignation").innerHTML = designation;
+      document.getElementById("sigPhone").innerHTML = phone;
+
+      document.getElementById("sigEmailText").innerHTML = email;
+      document.getElementById("sigEmailLink").href = "mailto:" + email;
+    }
+
+    function copyToClipboard() {
+      var copyBoxElement = document.getElementById('signaturewrap');
+      var range = document.createRange();
+      range.selectNode(copyBoxElement);
+
+      var selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+
+      try {
+        document.execCommand("copy");
+        selection.removeAllRanges();
+        alert("Signature copied. Paste into your email signature settings.");
+      } catch (err) {
+        selection.removeAllRanges();
+        alert("Copy failed. Please select the signature manually and copy.");
+      }
+    }
+  </script>
+
+</body>
+</html>
